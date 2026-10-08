@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "groebner"
+version = "1.0.0"
+description = "Exact Groebner bases over the rationals in pure Python: Buchberger with Gebauer-Moller criteria, ideal membership, elimination, intersection, quotients and polynomial system solving."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest", "sympy"]
+
+[project.scripts]
+groebner = "groebner.__main__:main"
+
+[tool.setuptools]
+packages = ["groebner"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
